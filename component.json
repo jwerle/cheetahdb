@@ -1,0 +1,13 @@
+{
+  "name": "cheetahdb",
+  "repo": "jwerle/cheetahdb",
+  "description": "Interface to IndexedDB",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
