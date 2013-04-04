@@ -1,0 +1,17 @@
+{
+  "name": "cheetahdb",
+  "version": "0.0.1",
+  "devDependencies": {
+    "tape": "~0.3.2"
+  },
+  "testling": {
+    "files": "test/files/*.js",
+    "browsers": {
+      "ie": [ 10 ],
+      "firefox": [ 13 ],
+      "chrome": [ 20 ],
+      "safari": [ 5.1 ],
+      "opera": [ 12 ]
+    }
+  }
+}

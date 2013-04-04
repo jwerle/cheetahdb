@@ -2,6 +2,8 @@
 
   Interface to IndexedDB
 
+ [![browser support](https://ci.testling.com/jwerle/cheetahdb.png)](https://ci.testling.com/jwerle/cheetahdb)
+
 ## Installation
 	
     $ component install jwerle/cheetahdb
