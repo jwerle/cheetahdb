@@ -8,6 +8,22 @@
   "development": {},
   "license": "MIT",
   "scripts": [
-    "index.js"
+    "index.js",
+    "lib/cheetah/assert.js",
+    "lib/cheetah/collection.js",
+    "lib/cheetah/db.js",
+    "lib/cheetah/error.js",
+    "lib/cheetah/fixes.js",
+    "lib/cheetah/model.js",
+    "lib/cheetah/promise.js",
+    "lib/cheetah/stream.js",
+    "lib/cheetah/buffer.js",
+    "lib/cheetah/connection.js",
+    "lib/cheetah/document.js",
+    "lib/cheetah/events.js",
+    "lib/cheetah/index.js",
+    "lib/cheetah/process.js",
+    "lib/cheetah/query.js",
+    "lib/cheetah/utils.js"
   ]
 }

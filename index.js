@@ -1,1 +1,1 @@
-module.exports = require('../lib/cheetah')
+module.exports = require('./lib/cheetah')
