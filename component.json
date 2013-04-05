@@ -14,7 +14,8 @@
     "lib/cheetah/cheetah.js",
     "lib/cheetah/collection.js",
     "lib/cheetah/connection.js",
-    "lib/cheetah/db.js",
+    "lib/cheetah/cursor.js",
+    "lib/cheetah/database.js",
     "lib/cheetah/document.js",
     "lib/cheetah/error.js",
     "lib/cheetah/events.js",
@@ -25,6 +26,8 @@
     "lib/cheetah/promise.js",
     "lib/cheetah/query.js",
     "lib/cheetah/stream.js",
-    "lib/cheetah/utils.js"
+    "lib/cheetah/transaction.js",
+    "lib/cheetah/utils.js",
+    "lib/cheetah/uuid.js"
   ]
 }
