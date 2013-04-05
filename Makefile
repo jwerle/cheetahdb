@@ -1,6 +1,7 @@
 
-build: components test-build index.js
+build: components index.js
 	@component build --dev
+	@make test-build
 
 components: component.json
 	@component install --dev
