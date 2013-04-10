@@ -13,7 +13,7 @@ User = new cheetah.Schema({
 	id 	: Number,
 	comments : [],
 	profile : {
-		name 	: String,
+		name 	: {type: String, get: function(){}},
 		email : String,
 		friends : {
 			inNetwork : [],
