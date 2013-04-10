@@ -1,3 +1,4 @@
+CHEETAH_DEBUG = 1;
 var cheetah = require('cheetahdb')
   , conn, db 
 
@@ -9,26 +10,64 @@ var User = cheetah.model('User', new cheetah.Schema({
 }))
 */
 
-User = new cheetah.Schema({
-	id 	: Number,
-	comments : [],
+Comment = cheetah.model('Comment', new cheetah.Schema({
+	content 		: String,
+	attachments	: []
+}));
+
+Post = cheetah.model('Post', new cheetah.Schema({
+	comments : [Comment],
+	content 	: String
+}));
+
+User = cheetah.model('User', new cheetah.Schema({
+	id 		: {
+		type 	: Number, 
+		get 	: function(value) {
+			return value;
+		},
+		set   : function(value) {
+			return value
+		}
+	},
+
+	uuid : String,
+
+	thing : Object,
+	things : [],
+	big:  {},
+	posts : [Post],
 	profile : {
-		name 	: {type: String, get: function(){}},
-		email : String,
+		name 		: {type: String, get: function(){ return this.name; }},
+		email 	: String,
 		friends : {
-			inNetwork : [],
+			inNetwork 	 : [],
 			outofNetwork : []
 		}
 	}
-});
+}));
 
-console.log(User)
+
+
 
 
 cheetah.ready(function() {
 	conn 	= cheetah.createConnection()
 	db 		= conn.open('test')
 	db.once('connected', function() {
-		//var user = new User({name: 'werle', email: 'joseph.werle@gmail.com'})
+		user = new User({
+			id : 1234,
+			profile : {
+				name : "Joseph Werle",
+				email : "joseph.werle@gmail.com",
+				friends : {
+
+				}
+			}
+		});
+		post = new Post({content: "I am an awesome post about nothing."});
+		post.comments.push(new Comment({content: "Yeah it is a pretty good post"}));
+		post.comments.push(new Comment({content: "Eh, it was alright."}));
+		user.posts.push(post)
 	});
 });
