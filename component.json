@@ -9,6 +9,20 @@
   "license": "MIT",
   "scripts": [
     "index.js",
+
+    "lib/cheetah/types/array.js",
+    "lib/cheetah/types/binary.js",
+    "lib/cheetah/types/boolean.js",
+    "lib/cheetah/types/buffer.js",
+    "lib/cheetah/types/date.js",
+    "lib/cheetah/types/float.js",
+    "lib/cheetah/types/index.js",
+    "lib/cheetah/types/int.js",
+    "lib/cheetah/types/json.js",
+    "lib/cheetah/types/number.js",
+    "lib/cheetah/types/object.js",
+    "lib/cheetah/types/string.js",
+
     "lib/cheetah/assert.js",
     "lib/cheetah/buffer.js",
     "lib/cheetah/cheetah.js",
@@ -22,11 +36,16 @@
     "lib/cheetah/fixes.js",
     "lib/cheetah/index.js",
     "lib/cheetah/model.js",
+    "lib/cheetah/mpath.js",
     "lib/cheetah/process.js",
     "lib/cheetah/promise.js",
     "lib/cheetah/query.js",
+    "lib/cheetah/request.js",
+    "lib/cheetah/schema.js",
+    "lib/cheetah/schemafield.js",
     "lib/cheetah/stream.js",
     "lib/cheetah/transaction.js",
+    "lib/cheetah/type.js",
     "lib/cheetah/utils.js",
     "lib/cheetah/uuid.js"
   ]

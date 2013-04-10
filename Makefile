@@ -1,7 +1,11 @@
-
-build: components index.js
+build:
+	@echo "Building.."
+	@echo whoami: `whoami`
+	@echo pwd: `pwd`
+	@echo component: `which component`
 	@component build --dev
-	@make test-build
+
+all: build test-build
 
 components: component.json
 	@component install --dev
@@ -12,4 +16,4 @@ clean:
 test-build:
 	cd ./test && grunt --force
 
-.PHONY: clean
+.PHONY: clean all components clean test-build build
