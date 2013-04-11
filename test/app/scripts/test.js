@@ -38,12 +38,12 @@ User = cheetah.model('User', new cheetah.Schema({
 	big:  {},
 	posts : [Post],
 	profile : {
-		name 		: {type: String, get: function(){ return this.name; }},
+		name 		: {type: String},
 		email 	: String,
-		friends : {
-			inNetwork 	 : [],
-			outofNetwork : []
-		}
+	},
+	friends : {
+		inNetwork 	 : [],
+		outNetwork : []
 	}
 }));
 
@@ -56,13 +56,16 @@ cheetah.ready(function() {
 	db 		= conn.open('test')
 	db.once('connected', function() {
 		user = new User({
+			foo: 'barrrr',
 			id : 1234,
 			profile : {
 				name : "Joseph Werle",
 				email : "joseph.werle@gmail.com",
-				friends : {
-
-				}
+				fib: 'biz'
+			},
+			friends : {
+				inNetwork: ['john', 'jane'],
+				outNetwork : ['harold', 'frank']
 			}
 		});
 		post = new Post({content: "I am an awesome post about nothing."});
